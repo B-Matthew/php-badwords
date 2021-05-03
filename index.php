@@ -10,14 +10,29 @@
     Visualizzare a schermo il paragrafo con la
     relativa lunghezza e sostituire la
     badword passata in GET con tre *. -->
-    <h1>Hello World
-      <?php
+
+    <!-- COPY THIS IN URL http://localhost/?badword=ciao -->
+    <div style="width: 60%; margin:auto;">
+      <h1>Frase Originale :
+        <?php
         $badword = $_GET['badword'];
-        $phrase = "Lorem ipsum dolor sit amet,ciao consectetur adipisicing elit, sed do eiusmod tempor ciao incididunt ut labore et dolore ciao magna aliqua. Ut enim ad minim veniam,ciao quis nostrud exercitation ullamco ciao laboris nisi ut aliquip ex ea commodo consequat.";
+        echo $phrase = "Lorem ipsum dolor sit amet,ciao consectetur adipisicing elit, sed do eiusmod tempor ciao incididunt ut labore et dolore ciao magna aliqua. Ut enim ad minim veniam,ciao quis nostrud exercitation ullamco ciao laboris nisi ut aliquip ex ea commodo consequat.";
+        ?>
+      </h1>
+      <h1>
+        Lunghezza Frase :
+        <?php
         echo strlen($phrase);
+        ?>
+      </h1>
+      <h1>
+        Frase Modificata :
+        <?php
         $goodPhrase = str_replace($badword, "***",$phrase);
         echo $goodPhrase;
-      ?></h1>
+        ?>
+      </h1>
+    </div>
   </body>
 
-</html>
+  </html>
